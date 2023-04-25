@@ -8,7 +8,7 @@ app.use(cors())
 const rappers = {
     'lemon balm': {
         'notes' : 'Always check with your doctor, this is not medical advice. Thyroid inhibitor, those with thyroid concerns should use extra care and use under the guidance of health-care professional',
-        'uses': 'anxiety, depression, nervious disorders, viral infections, bacterial infections, digestion, heart disease, heart ache, brain, memory, attracts bees',
+        'uses': 'anxiety, depression, nervous disorders, viral infections, bacterial infections, digestion, heart disease, heart ache, brain, memory, attracts bees',
         'zone': '4-9',
         'scientificName': 'Melissa officinalis' 
     },
@@ -42,10 +42,10 @@ app.get('/', (request, response)=>{
 })
 
 app.get('/api/:name',(request,response)=>{
-    const rapperName = request.params.name.toLowerCase()
+    const herbName = request.params.name.toLowerCase()
 
-    if( rappers[rapperName] ){
-        response.json(rappers[rapperName])
+    if( rappers[herbName] ){
+        response.json(rappers[herbName])
     }else{
         response.json(rappers['unknown'])
     }
