@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
-const PORT = 3000
+//removing to try to get on cyclic 
+//const PORT = 3000
 
 
 const rappers = {
@@ -35,6 +36,9 @@ app.get('/api/:name', (request, response) => {
     }
 })
 
-app.listen(PORT, () => {
-    console.log(`The server is now running on port ${PORT}! Betta Go Catch It!`)
-})
+app.listen(process.env.PORT||3000)
+
+// Removing to try to get up on cyclic
+// app.listen(PORT, () => {
+//     console.log(`The server is now running on port ${PORT}! Betta Go Catch It!`)
+// })
