@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
-//removing to try to get on cyclic 
+//removing to try to get on cyclic
 //const PORT = 3000
+const PORT = process.env.port || 5000;
 
 
 const rappers = {
@@ -36,7 +37,14 @@ app.get('/api/:name', (request, response) => {
     }
 })
 
-app.listen(process.env.PORT||3000)
+app.listen(PORT, async () => {
+  try {
+    await connect();
+    console.log(`Listening at ${PORT}`);
+  } catch (e) {
+    console.log(e.message);
+  }
+});
 
 // Removing to try to get up on cyclic
 // app.listen(PORT, () => {
