@@ -11,8 +11,8 @@ const rappers = {
         'birthName': 'Shéyaa Bin Abraham-Joseph',
         'birthLocation': 'London, England'
     },
-    'chance the rapper':{
-        'age': 29,
+    'chamomile':{
+        'use': 'sleep',
         'birthName': 'Chancelor Bennett',
         'birthLocation': 'Chicago, Illinois' 
     },
